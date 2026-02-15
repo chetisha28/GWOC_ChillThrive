@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-page">
+        <div class="logo">
+            <img src="images/logo.jpg">
+        </div>
+    <div class="details">
+        <input type="text" placeholder="Enter your name" id="name">
+        <input type="text" placeholder="Enter your email" id="email">
+
+  <div class="password-box">
+    <input type="password" id="password" placeholder="Enter password">
+    <img src="images/eye-open.png" class="togglePassword" data-target="password">
+  </div>
+
+  <div class="password-box">
+    <input type="password" id="confirmPassword" placeholder="Confirm password">
+    <img src="images/eye-open.png" class="togglePassword" data-target="confirmPassword">
+  </div>
+  <p id="errorMsg"></p>
+
+    <button type="submit" id="register" disabled>Register</button>
+
+    <h3>or</h3>   
+<a href="signin.html">Sign In</a> 
+</div>
+
+    <script src="login.js"></script>
+</body>
+</html>

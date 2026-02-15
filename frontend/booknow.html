@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book now</title>
+    <link rel="stylesheet" href="booknow.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="logo"><img src="images/logo.jpg"></div>
+            <a href="homepage.html" class="header-button">Home</a>
+            <a href="services.html" id="services-button" class="header-button">Services</a>
+            <a href="awareness.html" class="header-button">Awareness</a>
+            <a href="photogallery.html" class="header-button">Gallery</a>
+            <a href="aboutus.html" class="header-button">About Us</a>
+            <a href="contactus.html" class="header-button">Contact Us</a>
+        </div>
+        <div id="fakeHeader"></div>
+        <div class="heading">
+           <h1> Book Your Session </h1>
+        </div>
+  <section class="services-section">
+    <h1>Select a Service</h1>
+
+    <div class="services">
+      <div class="service-card" data-service="Icebath"> Icebath </div>
+      <div class="service-card" data-service="Jacuzzi"> Jacuzzi </div>
+      <div class="service-card" data-service="Steambath"> Steambath </div>
+      <div class="service-card" data-service="combo"> Combo </div>
+    </div>
+  </section>
+
+  <div id="booking-section" class="booking-section">
+    <h2 id="selected-service"></h2>
+
+    <label>Date</label>
+    <input type="date" id="date">
+
+    <label>Time</label>
+    <input type="time" id="time">
+
+    <button id="next-btn"> Next </button>
+  </div>
+
+<div class="provide-details" id="details">
+    <label>Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
+    
+    <label>Email</label>
+    <input type="email" id="email" placeholder="Enter email">
+    
+    <label>Phone Number</label>
+    <input type="tel" id="contact" placeholder="Enter phone number">
+    
+    <label>Coupon Code (if any)</label>
+    <input type="text" placeholder="Enter coupon code (optional)">
+    
+    <hr>
+    <div>
+        <h2>Total:</h2>
+    </div>
+    <button id="backbtn">Back</button>
+    <button id="confirmbtn" disabled>Confirm</button>
+</div>
+<div class="footer">
+        <h1 class="footer-text">
+            CHILL THRIVE </h1>
+        <p class="footer-subtext">Follow us on
+            <a href="https://www.youtube.com/@ChillThrive" class="youtube" ><img src="images/youtube.png"></a>
+            <a href="https://www.instagram.com/chill.thrive/" class="instagram"><img src="images/instagram.png"></a>
+            </p>
+        <div class="footer-links">
+          <h3 class="footer-links-heading">Quick Links :</h3>
+            <div class="footer-links-1">
+            <a href="homepage.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="services.html#IceBath">Ice Bath Therapy</a>
+            <a href="services.html#Jacuzzi">Jacuzzi Relaxation</a>
+            <a href="services.html#SteamBath">Steam Bath Therapy</a>
+            <a href="services.html#Combo">Combo Packages</a>
+            </div>
+            <div class="footer-links-2">
+            <a href="awareness.html">Awareness</a>
+            <a href="photogallery.html">Gallery</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+            </div>
+        </div>
+</div>
+
+ <script src="booknow.js"></script>   
+</body>
+</html>

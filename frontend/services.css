@@ -1,0 +1,812 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  background: linear-gradient(30deg, #01394ce5, #AFCFE6);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  z-index: 1000;
+}
+#fakeHeader{
+  height: 10vh;
+  width: 100%;
+}
+.logo {
+  margin-right: auto;
+}
+
+.logo img {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.hb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.header-button:hover,
+#services-button {
+  background-color: #e9f2f8;
+}
+@media (max-width: 768px) {
+
+  #header {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hb {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .header-button{
+    width: 100%;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .logo img {
+    height: 40px;
+    margin-top: 8px;
+  }
+}
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .hb {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hb.show {
+    display: flex;
+  }
+
+  #header {
+    height: auto;
+  }
+}
+
+#heading {
+    min-height: calc(100vh - 70px);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("images/Services_background1.jpg") center/cover no-repeat;
+}
+
+#heading h1 {
+  margin-left: 33%;
+   font-size: 120px;
+    font-weight: 800;
+    text-align: center;
+    background: #01394ce5;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1024px) {
+    #heading {
+        justify-content: center;
+        text-align: center;
+    }
+
+    #heading h1 {
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    #heading {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+#IceBath {
+    background: aliceblue;
+    align-items: center;
+    gap: 5%;
+    padding: 40px 5%;
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+}
+#IceBath-Image{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    border-radius: 10px;
+}
+#IceBath-Image img{
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    animation-name: ICB;
+    animation-timeline: view();
+    animation-play-state: entry 0% exit 40%;
+}
+@keyframes ICB{
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+#IceBath-Content{
+    flex: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#IceBath-heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#IceBath-subheading h3,
+#IceBath-duration,
+#IceBath-price,
+#IceBath-Benefits-heading,
+#IceBath-Benefits-content h3,
+#IceBath-Booking-Button {
+  margin-left: 0;
+}
+#IceBath-heading img{
+    height: 50px;  
+}
+#IceBath-subheading h3{
+    font-weight: lighter;
+    margin-right: 7%;
+    margin-left: 6%;
+}
+#IceBath-duration{
+    margin-top: 4%;
+    margin-left: 6%;
+    display: flex;
+}
+#IceBath-duration h3{
+    font-weight: lighter;
+    margin-left: 8px;
+}
+#IceBath-price{
+    margin-top: 2%;
+    margin-left: 6%;
+    display: flex;
+}
+#IceBath-price h3{
+    font-weight: lighter;
+    margin-left: 8px;
+}
+#IceBath-Benefits-heading{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-left: 6%;
+    font-weight: lighter;
+}
+#IceBath-Benefits-content{
+    margin-bottom: 5%;
+}
+#IceBath-Benefits-content h3{
+    margin-bottom: 2%;
+    font-weight: lighter;
+    margin-left: 6%;
+}
+#IceBath-Booking-Button{
+    margin-left: 6%;
+    color: white;
+    background-color: rgb(94, 175, 251);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 2px rgb(210, 209, 209);
+}
+@media (max-width: 992px) {
+  #IceBath {
+    flex-direction: column;
+    text-align: center;
+    background: aliceblue;
+  }
+
+  #IceBath-heading {
+    justify-content: center;
+  }
+
+  #IceBath-duration,
+  #IceBath-price {
+    justify-content: center;
+  }
+
+  #IceBath-Image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #IceBath-Image img{
+    margin: 0 auto;
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  #IceBath {
+    padding: 30px 20px;
+  }
+
+  #IceBath-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  #IceBath-subheading h3 {
+    font-size: 1rem;
+  }
+
+  #IceBath-Benefits-content h3 {
+    font-size: 0.95rem;
+  }
+
+  #IceBath-Booking-Button {
+    display: inline-block;
+    margin-top: 15px;
+  }
+}
+
+#Jacuzzi{
+    background: aliceblue;
+    align-items: center;
+    gap: 5%;
+    padding: 40px 5%;
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+}
+#Jacuzzi-content{
+    flex: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#Jacuzzi-heading{
+    display: flex;
+}
+#Jacuzzi-heading img{
+    height: 50px;
+}
+#Jacuzzi-subheading h3{
+    font-weight: lighter;
+    margin-left: 6%;
+}
+#Jacuzzi-duration{
+    margin-left: 6%;
+    margin-top: 4%;
+    display: flex;
+}
+#Jacuzzi-duration h3{
+    margin-left: 8px;
+    font-weight: lighter;
+}
+#Jacuzzi-price{
+    margin-left: 6%;
+    margin-top: 2%;
+    display: flex;
+}
+#Jacuzzi-price h3{
+    margin-left: 8px;
+    font-weight: lighter;
+}
+#Jacuzzi-Benefits-heading{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-left: 6%;
+    font-weight: lighter;
+}
+#Jacuzzi-Benefits-content{
+    margin-bottom: 5%;
+}
+#Jacuzzi-Benefits-content h3{
+    margin-bottom: 2%;
+    font-weight: lighter;
+    margin-left: 6%;
+}
+#Jacuzzi-Booking-Button{
+    margin-left: 6%;
+    color: white;
+    background-color: rgb(94, 175, 251);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 2px rgb(210, 209, 209);
+}
+#Jacuzzi-subheading h3,
+#Jacuzzi-duration,
+#Jacuzzi-price,
+#Jacuzzi-Benefits-heading,
+#Jacuzzi-Benefits-content h3,
+#Jacuzzi-Booking-Button {
+  margin-left: 0;
+}
+
+#Jacuzzi-Image{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    border-radius: 10px;
+
+}
+#Jacuzzi-Image img{
+    width: 100%;
+    min-width: 650px;
+    border-radius: 10px;
+    animation-name: ICB;
+    animation-timeline: view();
+    animation-play-state: entry 0% exit 40%;
+}
+@media (max-width: 992px) {
+  #Jacuzzi {
+    flex-direction: column;
+    text-align: center;
+    background: aliceblue;
+  }
+
+  #Jacuzzi-heading {
+    justify-content: center;
+  }
+
+  #Jacuzzi-duration,
+  #Jacuzzi-price {
+    justify-content: center;
+  }
+ #Jacuzzi-content{
+    order: 1;
+ }
+  #Jacuzzi-Image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    order: -1;
+  }
+  #Jacuzzi-Image img{
+    margin: 0 auto;
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  #Jacuzzi {
+    padding: 30px 20px;
+  }
+
+  #Jacuzzi-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  #Jacuzzi-subheading h3 {
+    font-size: 1rem;
+  }
+
+  #Jacuzzi-Benefits-content h3 {
+    font-size: 0.95rem;
+  }
+
+  #Jacuzzi-Booking-Button {
+    display: inline-block;
+    margin-top: 15px;
+  }
+}
+#SteamBath {
+    background: aliceblue;
+    align-items: center;
+    gap: 5%;
+    padding: 40px 5%;
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+}
+#SteamBath-Image{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    border-radius: 10px;
+}
+#SteamBath-Image img{
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    animation-name: ICB;
+    animation-timeline: view();
+    animation-play-state: entry 0% exit 40%;
+}
+#SteamBath-Content{
+    flex: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#SteamBath-heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#SteamBath-subheading h3,
+#SteamBath-duration,
+#SteamBath-price,
+#SteamBath-Benefits-heading,
+#SteamBath-Benefits-content h3,
+#SteamBath-Booking-Button {
+  margin-left: 0;
+}
+#SteamBath-heading img{
+    height: 50px;  
+}
+#SteamBath-subheading h3{
+    font-weight: lighter;
+    margin-right: 7%;
+    margin-left: 6%;
+}
+#SteamBath-duration{
+    margin-top: 4%;
+    margin-left: 6%;
+    display: flex;
+}
+#SteamBath-duration h3{
+    font-weight: lighter;
+    margin-left: 8px;
+}
+#SteamBath-price{
+    margin-top: 2%;
+    margin-left: 6%;
+    display: flex;
+}
+#SteamBath-price h3{
+    font-weight: lighter;
+    margin-left: 8px;
+}
+#SteamBath-Benefits-heading{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-left: 6%;
+    font-weight: lighter;
+}
+#SteamBath-Benefits-content{
+    margin-bottom: 5%;
+}
+#SteamBath-Benefits-content h3{
+    margin-bottom: 2%;
+    font-weight: lighter;
+    margin-left: 6%;
+}
+#SteamBath-Booking-Button{
+    margin-left: 6%;
+    color: white;
+    background-color: rgb(94, 175, 251);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 2px rgb(210, 209, 209);
+}
+@media (max-width: 992px) {
+  #SteamBath {
+    flex-direction: column;
+    text-align: center;
+    background: aliceblue;
+  }
+
+  #SteamBath-heading {
+    justify-content: center;
+  }
+
+  #SteamBath-duration,
+  #SteamBath-price {
+    justify-content: center;
+  }
+
+  #SteamBath-Image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #SteamBath-Image img{
+    margin: 0 auto;
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  #SteamBath {
+    padding: 30px 20px;
+  }
+
+  #SteamBath-heading h1 {
+    font-size: 1.8rem;
+  }
+
+  #SteamBath-subheading h3 {
+    font-size: 1rem;
+  }
+
+  #SteamBath-Benefits-content h3 {
+    font-size: 0.95rem;
+  }
+
+  #steamBath-Booking-Button {
+    display: inline-block;
+    margin-top: 15px;
+  }
+}
+
+#Combo-Packages{
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation-name: CP;
+    animation-timeline: view();
+    animation-range: entry 0% exit 20%;
+}
+@keyframes CP{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+        clip-path: inset(100% 0% 0% 0%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+        clip-path: inset(0% 0% 0% 0%);
+    }
+}
+#Combo-heading{
+    height: 20%;
+    width: 100%;
+}
+#Combo-heading {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+#Combo-heading h1 {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  margin-top: 40px;
+  text-align: center;
+}
+
+#Combo-heading h2 {
+  text-align: center;
+  font-weight: lighter;
+  margin: 10px 20px;
+}
+#Combo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 5%;
+}
+.combo {
+  flex: 1 1 300px;
+  max-width: 350px;
+  min-height: 520px;
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.combo:hover {
+  box-shadow: 5px 5px 10px 2px rgb(210, 209, 209);
+}
+
+.combo hr {
+  margin: 20px 0;
+}
+#Combo1-heading,
+#Combo2-heading,
+#Combo3-heading {
+  margin-bottom: 20px;
+}
+
+#Combo1-heading h2,
+#Combo2-heading h2,
+#Combo3-heading h2 {
+  display: flex;
+  justify-content: center;
+}
+
+#Combo1-heading h3,
+#Combo2-heading h3,
+#Combo3-heading h3 {
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+}
+#Combo1-content,
+#Combo2-content,
+#Combo3-content {
+  margin: 20px 40px;
+}
+
+.combo h3 {
+  font-weight: lighter;
+  text-align: center;
+}
+
+.combo h4 {
+  font-weight: lighter;
+}
+#C1-duration,
+#C1-OGprice,
+#C1-DSCprice,
+#C1-Save,
+#C2-duration,
+#C2-OGprice,
+#C2-DSCprice,
+#C2-Save,
+#C3-duration,
+#C3-OGprice,
+#C3-DSCprice,
+#C3-Save {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#C1-Booking,
+#C2-Booking,
+#C3-Booking {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#C1-Booking-Button,
+#C2-Booking-Button,
+#C3-Booking-Button {
+  color: white;
+  background-color: rgb(94, 175, 251);
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: box-shadow 0.3s ease;
+}
+
+#C1-Booking-Button:hover,
+#C2-Booking-Button:hover,
+#C3-Booking-Button:hover {
+  box-shadow: 5px 5px 10px 2px rgb(210, 209, 209);
+}
+@media (max-width: 992px) {
+  #Combo {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .combo {
+    max-width: 100%;
+  }
+
+  #Combo-heading h1 {
+    font-size: 2rem;
+  }
+
+  #Combo-heading h2 {
+    font-size: 1rem;
+  }
+}
+
+.footer {
+    background-color: whitesmoke;
+    color: rgb(20, 20, 20);
+    text-align: left;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+}
+.footer-links-heading{
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.footer-text{
+    margin: 10px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.footer-subtext{
+    font-size: 1.2rem;
+    margin: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.youtube img{
+    width: 50px;
+    height: auto;
+    margin: 0 10px;
+    vertical-align: middle;
+    box-shadow: rgba(0, 0, 0, 0.251);
+    background-color: transparent;
+}
+.instagram img{
+    width: 50px;
+    height: auto;
+    margin: 0 10px;
+    vertical-align: middle;
+    border: rgba(0, 0, 0, 0.251);
+}
+.footer-links-1{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.footer-links-1 a{
+    color: rgb(20, 20, 20);
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 1.0rem;
+}
+.footer-links-1 a:hover{
+    text-decoration: underline;
+}
+.footer-links-2{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer-links-2 a{
+    color: rgb(20, 20, 20);
+    margin-bottom: 15px;
+    text-decoration: none;
+    font-size: 1.0rem;   
+}
+.footer-links-2 a:hover{
+    text-decoration: underline;
+}
+.footer-links{
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    margin-left: 10px;
+}

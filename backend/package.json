@@ -1,0 +1,30 @@
+{
+  "name": "gwoc_chillthrive",
+  "version": "1.0.0",
+  "description": "CHILL THRIVE - A premium wellness &amp; recovery brand focused on Ice Bath Therapy, Jacuzzi Therapy, and Steam Bath Experiences.",
+  "main": "homepage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sparshk13/gwoc_chillthrive.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sparshk13/gwoc_chillthrive/issues"
+  },
+  "homepage": "https://github.com/sparshk13/gwoc_chillthrive#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "nodemailer": "^7.0.12",
+    "path": "^0.12.7"
+  }
+}

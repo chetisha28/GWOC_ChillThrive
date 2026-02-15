@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - ChillThrive</title>
+    <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Admin Dashboard</h1>
+            <div>
+                <span id="admin-name">Welcome, Admin</span>
+                <button class="btn btn-danger" onclick="logout()">Logout</button>
+            </div>
+        </div>
+        
+        <!-- Add Service Form -->
+        <div class="form-section">
+            <h2>Add New Service</h2>
+            <form id="service-form">
+                <div class="form-group">
+                    <label for="service-name">Service Name:</label>
+                    <input type="text" id="service-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="service-price">Price (₹):</label>
+                    <input type="number" id="service-price" required>
+                </div>
+                <div class="form-group">
+                    <label for="service-category">Category:</label>
+                    <select id="service-category" required>
+                        <option value="">Select Category</option>
+                        <option value="ice bath">Ice Bath</option>
+                        <option value="jacuzzi">Jacuzzi</option>
+                        <option value="steam bath">Steam Bath</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success">Add Service</button>
+                <button type="button" class="btn btn-primary hidden" id="update-btn">Update Service</button>
+                <button type="button" class="btn btn-danger hidden" id="cancel-btn" onclick="cancelEdit()">Cancel</button>
+            </form>
+        </div>
+        
+        <!-- Services List -->
+        <div>
+            <h2>Manage Services</h2>
+            <div id="services-container" class="services-grid">
+                <!-- Services will be loaded here -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="admin-dashboard.js"></script>
+</body>
+</html>

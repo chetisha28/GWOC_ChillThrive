@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="photogallery.css">
+</head>
+<body>
+    <div class="header">
+     <div class="logo"><img src="images/logo.jpg"></div>
+         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="hb">
+    <a href="homepage.html" class="header-button" id="">Home</a>
+    <a href="services.html" class="header-button">Services</a>
+    <a href="awareness.html" class="header-button">Awareness</a>
+    <a href="photogallery.html" id="open" class="header-button">Gallery</a>
+    <a href="aboutus.html" class="header-button">About Us</a>
+    <a href="contactus.html" class="header-button">Contact Us</a>
+    </div>
+</div>
+<div class="gallery">
+  <section class="gallery-header">
+    <h1>Our Wellness Spaces</h1>
+    <p>Designed for stillness, recovery, and renewal</p>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Jacuzzi Therapy</h2>
+    <div class="photo-grid">
+      <img src="images/jacuzzi.png" alt="Jacuzzi Spa" class="gallery-img">
+      <img src="images/jacuzzi6.jpeg" alt="Jacuzzi Spa" class="gallery-img">
+      <img src="images/Jacuzzi.jpeg" class="gallery-img" alt="Jacuzzi Spa">
+      <img src="images/jacuzzihome.webp" alt="Jacuzzi Spa" class="gallery-img">
+    </div>
+  </section>
+
+  <section class="gallery-section light">
+    <h2>Ice Bath Recovery</h2>
+    <div class="photo-grid">
+      <img src="images/icebath6.jpeg" alt="Ice Bath" class="gallery-img">
+      <img src="images/icebath4.jpg" alt="Ice Bath" class="gallery-img">
+      <img src="images/icebath9.jpeg" alt="Ice Bath" class="gallery-img">      
+      <img src="images/icebathhome.jpeg" alt="Ice Bath" class="gallery-img">
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2>Steam Bath Relaxation</h2>
+    <div class="photo-grid">
+      <img src="images/steambath7.jpeg" alt="Steam Bath" class="gallery-img">
+      <img src="images/Steambath.jpeg" alt="Steam Bath" class="gallery-img">
+      <img src="images/steambath.png" alt="Steam Bath" class="gallery-img">
+      <img src="images/steambathhome.jpg" alt="Steam Bath" class="gallery-img">
+    </div>
+  </section>
+
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="Spa View">
+</div>
+
+</div>
+    <div class="footer">
+        <h1 class="footer-text">
+            CHILL THRIVE </h1>
+        <p class="footer-subtext">Follow us on
+            <a href="https://www.youtube.com/@ChillThrive" class="youtube" ><img src="images/youtube.png"></a>
+            <a href="https://www.instagram.com/chill.thrive/" class="instagram"><img src="images/instagram.png"></a>
+            </p>
+        <div class="footer-links">
+          <h3 class="footer-links-heading">Quick Links :</h3>
+            <div class="footer-links-1">
+            <a href="homepage.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="services.html#IceBath">Ice Bath Therapy</a>
+            <a href="services.html#Jacuzzi">Jacuzzi Relaxation</a>
+            <a href="services.html#SteamBath">Steam Bath Therapy</a>
+            <a href="services.html#Combo">Combo Packages</a>
+            </div>
+            <div class="footer-links-2">
+            <a href="awareness.html">Awareness</a>
+            <a href="photogallery.html">Gallery</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+       document.querySelector(".hb").classList.toggle("show");
+        }
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.querySelector('.lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    document.querySelectorAll('.gallery-img').forEach(img => {
+     img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('show');
+     });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('show');
+    });
+
+    lightbox.addEventListener('click', e => {
+      if (e.target !== lightboxImg) {
+      lightbox.classList.remove('show');
+    }
+    });
+    </script>
+</body>
+</html>

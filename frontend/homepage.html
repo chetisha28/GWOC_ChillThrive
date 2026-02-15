@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chill Thrive</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+<div class="header">
+    <div class="logo"><img src="images/logo.jpg"></div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="hb">
+    <a href="homepage.html" id="open" class="header-button" >Home</a>
+    <a href="services.html" class="header-button">Services</a>
+    <a href="awareness.html" class="header-button">Awareness</a>
+    <a href="photogallery.html" class="header-button">Gallery</a>
+    <a href="aboutus.html" class="header-button">About Us</a>
+    <a href="contactus.html" class="header-button">Contact Us</a>
+    
+    <!-- Dynamic Auth Section -->
+    <div id="auth-section">
+        <!-- Will be populated by JavaScript -->
+    </div>
+    </div>
+</div>
+
+<!-- User Dashboard Section (Hidden by default) -->
+<div id="user-dashboard" class="user-dashboard" style="display: none;">
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h2>Welcome back, <span id="user-name"></span>!</h2>
+            <div class="dashboard-actions">
+                <button class="btn btn-primary" onclick="showMyBookings()">My Bookings</button>
+                <button class="btn btn-success" onclick="window.location.href='booknow.html'">Book New Session</button>
+                <button class="btn btn-secondary" onclick="hideDashboard()">Back to Home</button>
+                <button class="btn btn-danger" onclick="logout()">Logout</button>
+            </div>
+        </div>
+        
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h3 id="total-bookings">0</h3>
+                <p>Total Bookings</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="upcoming-bookings">0</h3>
+                <p>Upcoming Sessions</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="completed-bookings">0</h3>
+                <p>Completed Sessions</p>
+            </div>
+        </div>
+        
+        <div id="bookings-section" class="bookings-section" style="display: none;">
+            <h3>My Bookings</h3>
+            <div id="bookings-container">
+                <!-- Bookings will be loaded here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="video-container">
+    <video autoplay muted loop playsinline src="homepageV.mp4">
+    </video>
+</div>
+ <div class="main">
+    <h1 class="heading" id="typing"></h1>
+    <h2 class="subheading">Where Recovery Meets Resilience</h2>
+    <div class="second">
+    <a href="booknow.html">Book a session &#8594 </a>
+    <a href="services.html">Explore services &#8594</a>
+ </div>
+ </div>
+<div class="content">
+        <div class="services">
+    <h1 class="services-heading">OUR SERVICES</h1>
+</div>
+  <div class="cards">
+    <a href="services.html#IceBath" class="card-link">
+    <div class="icebath-card">
+        <img class="card-image"src="images/icebathhome.jpeg" >
+        <div class="card-content">
+        <h2 class="card-heading">Ice Bath Therapy</h2>
+        <p class="card-description">Experience the rejuvenating benefits of ice bath therapy. Improve circulation, reduce inflammation, and boost your mood with our guided sessions.</p>
+    </div>
+  </div>
+    </a>
+    <a href="services.html#Jacuzzi" class="card-link">
+    <div class="Jacuzzi-card">
+        <img src="images/jacuzzihome.webp" class="card-image">
+        <div class="card-content">
+        <h2 class="card-heading">Jacuzzi Relaxation</h2>
+        <p class="card-description">Unwind in our luxurious Jacuzzi. Relieve stress, soothe sore muscles, and enjoy a tranquil experience designed for your well-being.</p>
+        </div>
+    </div>
+    </a>
+    <a href="services.html#SteamBath" class="card-link">
+    <div class="steambath-card">
+        <img src="images/steambathhome.jpg" class="card-image">
+        <div class ="card-content">
+        <h2 class="card-heading">Steam Bath Therapy</h2>
+        <p class="card-description">Detoxify and relax with our steam bath therapy. Enhance your skin health, improve respiratory function, and indulge in a calming atmosphere.</p>
+        </div>
+    </div>
+    </a>
+    <a href="services.html#Combo" class="card-link">
+    <div class="combo-card">
+        <img src="images/combohome.jpg" class="card-image">
+        <div class="card-content">
+        <h2 class="card-heading">Combo Packages</h2>
+        <p class="card-description">Ice Bath + Steam <br> Ice Bath + Jacuzzi <br> Full Recovery Combo (Ice Bath + Steam + Jacuzzi)</p>
+        </div>
+    </div>
+    </a>
+    </div>
+    <div class="why">
+        <h1 class="why-heading">Why Choose Chill Thrive ?</h1>
+        <button id="btn">Find Out Why !</button>
+        <div id="why-description" class="find" style="display: none;">
+            <div class="card-1">
+            <div class="why-card">
+            <h3 class="why-subheading">Science-backed recovery</h3>
+            <p class="why-text">Our therapies are based on scientific research to ensure effective recovery and wellness.</p>
+            </div>
+            <div class="why-card">
+            <h3 class="why-subheading">Trained Professionals</h3>
+            <p class="why-text">Our team consists of certified professionals dedicated to providing top-notch care.</p>
+            </div>
+            </div>
+            <div class="card-2">
+            <div class="why-card">
+            <h3 class="why-subheading">Hygienic & Premium setup</h3>
+            <p class="why-text">We maintain the highest standards of hygiene and offer premium facilities for your comfort.</p>
+            </div>
+            <div class="why-card">
+            <h3 class="why-subheading">Community-driven wellness</h3>
+            <p class="why-text">Join a community that values health and wellness, and embark on your recovery journey with us.</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimonials">
+        <h1 class="testimonials-heading">What Our Clients Say</h1>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <img src="images/profile-avatar.png" class="testimonial-image">
+                <p>&#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
+                <p class="testimonial-text">"The ice bath sessions are invigorating and have significantly reduced my muscle soreness."</p>
+                <h3 class="testimonial-author">- Suresh M.</h3>
+            </div>
+            <div class="testimonial-card">
+                <img src="images/profile-avatar.png" class="testimonial-image">
+                <p> &#x2B50; &#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
+                <p class="testimonial-text">"The Jacuzzi experience at Chill Thrive is unparalleled. It's the perfect way to unwind after a long day."</p>
+                <h3 class="testimonial-author">- Sara L.</h3>
+            </div>
+            <div class="testimonial-card">
+                <img src="images/profile-avatar.png"  class="testimonial-image">
+                <p> &#x2B50; &#x2B50; &#x2B50; &#x2B50; &#x2B50;</p>
+                <p class="testimonial-text">"I love the steam bath therapy here. It has improved my skin and helped me relax like never before."</p>
+                <h3 class="testimonial-author">- Deepak K.</h3>
+            </div>
+        </div>
+        <div class="add-review">
+         <h2>Add Your Review</h2>
+
+         <input type="text" id="names" placeholder="Your Name" required>
+    
+         <select id="rating">
+            <option value="5">&#x2B50; &#x2B50; &#x2B50; &#x2B50; &#x2B50;</option>
+            <option value="4">&#x2B50; &#x2B50; &#x2B50; &#x2B50;</option>
+            <option value="3">&#x2B50; &#x2B50; &#x2B50; </option>
+            <option value="2">&#x2B50; &#x2B50;</option>
+            <option value="1">&#x2B50;</option>
+         </select>
+
+         <textarea id="review" placeholder="Write your review..." required></textarea>
+
+         <button onclick="addReview()">Submit Review</button>
+        </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <h1 class="footer-text">
+            CHILL THRIVE </h1>
+        <p class="footer-subtext">Follow us on
+            <a href="https://www.youtube.com/@ChillThrive" class="youtube" ><img src="images/youtube.png"></a>
+            <a href="https://www.instagram.com/chill.thrive/" class="instagram"><img src="images/instagram.png"></a>
+            </p>
+        <div class="footer-links">
+          <h3 class="footer-links-heading">Quick Links :</h3>
+            <div class="footer-links-1">
+            <a href="homepage.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="services.html#IceBath">Ice Bath Therapy</a>
+            <a href="services.html#Jacuzzi">Jacuzzi Relaxation</a>
+            <a href="services.html#SteamBath">Steam Bath Therapy</a>
+            <a href="services.html#Combo">Combo Packages</a>
+            </div>
+            <div class="footer-links-2">
+            <a href="awareness.html">Awareness</a>
+            <a href="photogallery.html">Gallery</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+            </div>
+        </div>
+</div>
+    <script src="homepage.js" defer></script>
+</body>
+</html>
