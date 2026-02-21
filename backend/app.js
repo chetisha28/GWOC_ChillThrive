@@ -65,3 +65,7 @@ app.get('/contactus',(req,res)=>{
 })
 
 module.exports = app;
+// Serve frontend for all non-API routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/index.html"));
+});
