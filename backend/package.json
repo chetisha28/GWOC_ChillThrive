@@ -1,6 +1,7 @@
 {
   "name": "gwoc_chillthrive",
   "version": "1.0.0",
+  "license": "MIT",
   "description": "CHILL THRIVE - A premium wellness &amp; recovery brand focused on Ice Bath Therapy, Jacuzzi Therapy, and Steam Bath Experiences.",
   "main": "homepage.js",
   "scripts": {
