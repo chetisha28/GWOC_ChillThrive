@@ -4,12 +4,11 @@
   "description": "CHILL THRIVE - A premium wellness &amp; recovery brand focused on Ice Bath Therapy, Jacuzzi Therapy, and Steam Bath Experiences.",
   "main": "homepage.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
+  "start": "node index.js" 
+},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sparshk13/gwoc_chillthrive.git"
+    "url": "git+https://github.com/chetisha28/GWOC_ChillThrive.git"
   },
   "keywords": [],
   "author": "",
